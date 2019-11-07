@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reset.css">
+  <script src="dist/script.bundle.js" defer></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body id="body">
+  <header class="header">
+    <div class="header__wrapper">
+      <img class="header__element" src="Icons/Menu1.jpg" alt="menu icon">
+      <p class="header__element">CodeJam - Pallete</p>
+    </div>
+    <img src="Icons/Menu2.jpg" class="header__element" alt="menu icon">
+  </header>
+  <main class="main">
+    <div class="main__wrapper">
+      <div id="localStorageWrapper">
+        <input type="button" value="refresh local storage" class="refresh_Button" id="refresh_Button">
+      </div>
+      <ul class="main__palette">
+        <li class="main__pallete__element" id="paint-bucket">
+          <img class="main__pallete__element__icon" src="Icons/icon-share copy.jpg" alt="icon share">
+          <p class="main__pallete__element__p">Paint bucket(p)</p>
+        </li>
+        <li class="main__pallete__element" id="choose-color">
+          <img class="main__pallete__element__icon" src="Icons/icon-upload copy.jpg" alt="icon upload">
+          <p class="main__pallete__element__p">Choose color(c)</p>
+        </li>
+        <hr style="width:100%">
+        <li class="main__pallete__element" id="move">
+          <img class="main__pallete__element__icon" src="Icons/icon-copy copy.jpg" alt="icon copy">
+          <p class="main__pallete__element__p">Move(m)</p>
+        </li>
+        <li class="main__pallete__element" id="transform">
+          <img class="main__pallete__element__icon" src="Icons/exchange-alt copy.jpg" alt="icon exchange">
+          <p class="main__pallete__element__p">transform(t)</p>
+        </li>
+      </ul>
+      <ul class="main__color">
+        <li class="main__color__element">
+          <div class="main__color__element__dot color__current-color" id="current-color"></div>
+          <p class="main__color__element__p">Current color</p>
+        </li>
+        <li class="main__color__element">
+          <div class="main__color__element__dot" id="previous-color"></div>
+          <p class="main__color__element__p color__previous-color">Prev color</p>
+        </li>
+        <hr style="width:100%">
+        <li class="main__color__element">
+          <div class="main__color__element__dot" style="background-color:#F74141;"></div>
+          <p class="main__color__element__p">red</p>
+        </li>
+        <li class="main__color__element">
+          <div class="main__color__element__dot" style="background-color:#41B6F7;"></div>
+          <p class="main__color__element__p">blue</p>
+        </li>
+      </ul>
+    </div>
+    <div class="main__frames">
+      <div class="firstFrame frame">
+        <div class="numberOfFrame">
+          1
+        </div>
+      </div>
+      <div class="addNewFrame">Add new frame</div>
+    </div>
+    <div class="main__canvas" id="canvas">
+      <div class="main__canvas__element" id="canvas_1" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_2" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_3" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_4" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_5" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_6" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_7" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_8" draggable="false"></div>
+      <div class="main__canvas__element" id="canvas_9" draggable="false"></div>
+    </div>
+    <div class="main__player">
+      <input type="button" value="Save this frame" class="main__player__Button SaveButton">
+      <input type="button" value="Delete this frame" class="main__player__Button DeleteButton">
+      <input type="button" value="Duplicate this frame" class="main__player__Button DuplicateButton">
+      <input type="button" value="Take this frame" class="main__player__Button takePictureButton">
+      <input type="button" value="Clear animation" class="main__player__Button clearAnimationBotton">
+      <input type="button" value="Create animation from taken frames" class="main__player__Button AnimateButton">
+      <div class="numberContainer">
+        <label for="frames">Number of frames (1-24):</label>
+        <input type="number" id="frames" name="frames" value = 1 min="1" max="24" class="FPS" style="border: 1px solid gray;">
+      </div>
+      <div class="showAnimation"></div>
+      <input type="button" value="Fullscreen" class="main__player__Button FullscreenButton">
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
